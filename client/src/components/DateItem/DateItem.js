@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 import "./DateItem.css"
 
-export class DateItem extends Component {
+class DateItem extends Component {
     render() {
         return (
-            <div>
+            <div className="DateItem">
                 
             </div>
         )
