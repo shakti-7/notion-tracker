@@ -79,15 +79,15 @@ class Layout extends Component {
                 <Navbar />
                 {
                     this.state.loading ?
-                        <div className="Layout--Loading">
-                            <img src={spinner} alt="loading..." />
+                        <div className="Layout--LoadingContainer">
+                            <img className="Layout--Loading" src={spinner} alt="loading..." />
                         </div> :
                     <div className="Layout--Body">
                         <div className="Layout--Container" id="today">
                             <div className="LayoutTitle">
                                 <button className="LayoutTitle--Button" onClick={()=>this.onToggleToday()}>{`>`}</button>
                                 <div className="LayoutTitle--Title">Today</div>
-                                <hr className="LayoutTitle--Hr"></hr>
+                                <div className="LayoutTitle--Hr"></div>
                             </div>
                             {
                                 this.state.today ?
@@ -103,7 +103,7 @@ class Layout extends Component {
                             <div className="LayoutTitle">
                                 <button className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()}>{`>`}</button>
                                 <div className="LayoutTitle--Title">Upcoming</div>
-                                <hr className="LayoutTitle--Hr"></hr>
+                                <div className="LayoutTitle--Hr"></div>
                             </div>
                             {
                                 this.state.upcoming ?
@@ -117,7 +117,7 @@ class Layout extends Component {
                             <div className="LayoutTitle">
                                 <button className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()}>{`>`}</button>
                                 <div className="LayoutTitle--Title">Completed</div>
-                                <hr className="LayoutTitle--Hr"></hr>
+                                <div className="LayoutTitle--Hr"></div>
                             </div>
                             {
                                 this.state.completed ?

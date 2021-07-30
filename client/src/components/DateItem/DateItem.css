@@ -1,0 +1,46 @@
+.DateItem {
+    border-radius: 20px;
+    width: 70%;
+    margin: 3vh auto;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.DateItem--Head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.DateItem--Title {
+    display: flex;
+    font-size: 25px;
+}
+
+.DateItem--Date {
+    display: flex;
+    font-size: 25px;
+}
+
+.DateItem--Description {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.DateItem--Tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.DateItem--Tag {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}

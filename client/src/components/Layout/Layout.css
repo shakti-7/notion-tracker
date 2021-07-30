@@ -1,0 +1,64 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.Layout--LoadingContainer {
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Layout--Loading {
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.Layout--Body {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+}
+
+.Layout--Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.LayoutTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vh auto;
+    width: 80%;
+    color: #5D5C61;
+}
+
+.LayoutTitle--Button {
+    display: flex;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.LayoutTitle--Title {
+    display: flex;
+    font-size: 25px;
+    padding: 0 7px;
+}
+
+.LayoutTitle--Hr {
+    display: flex;
+    height: 2.5px;
+    width: 100%;
+    background-color: #5D5C61;
+}
+
+.Layout--NothingDue {
+    color: #5D5C61;
+    font-size: 20px;
+}

@@ -1,0 +1,21 @@
+.Navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.Navbar--Links {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Navbar--Link {
+    display: flex;
+    width: fit-content;
+    font-size: 25px;
+    text-decoration: none;
+    color: #5D5C61;
+    margin: 30px 50px 0 0;
+}

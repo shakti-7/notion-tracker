@@ -12,8 +12,10 @@ class DateItem extends Component {
 
         return (
             <div className="DateItem" style={{ backgroundColor: bgcolor }}>
-                <div className="DateItem--Title">{title}</div>
-                <div className="DateItem--Date">{date}</div>
+                <div className="DateItem--Head">
+                    <div className="DateItem--Title">{title}</div>
+                    <div className="DateItem--Date">{date}</div>
+                </div>
                 <div className="DateItem--Description">{description}</div>
                 <div className="DateItem--Tags">
                     {
