@@ -1,5 +1,3 @@
-import './App.css';
-
 import Layout from './components/Layout/Layout';
 
 function App() {
@@ -10,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

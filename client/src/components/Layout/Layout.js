@@ -76,7 +76,9 @@ class Layout extends Component {
 
         return (
             <div className="Layout">
-                <Navbar />
+                {
+                    window.innerWidth>=768 ? <Navbar /> : null
+                }
                 {
                     this.state.loading ?
                         <div className="Layout--LoadingContainer">
@@ -85,7 +87,7 @@ class Layout extends Component {
                     <div className="Layout--Body">
                         <div className="Layout--Container" id="today">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleToday()}>{`>`}</button>
+                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleToday()} style={{ transform: this.state.today ? "rotate(90deg)" : null }}>{'>'}</button>
                                 <div className="LayoutTitle--Title">Today</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
@@ -101,7 +103,7 @@ class Layout extends Component {
                         </div>
                         <div className="Layout--Container" id="upcoming">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()}>{`>`}</button>
+                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()} style={{ transform: this.state.upcoming ? "rotate(90deg)" : null }}>{`>`}</button>
                                 <div className="LayoutTitle--Title">Upcoming</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
@@ -115,7 +117,7 @@ class Layout extends Component {
                         </div>
                         <div className="Layout--Container" id="completed">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()}>{`>`}</button>
+                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()} style={{ transform: this.state.completed ? "rotate(90deg)" : null }}>{`>`}</button>
                                 <div className="LayoutTitle--Title">Completed</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>

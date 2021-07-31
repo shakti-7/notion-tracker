@@ -19,3 +19,17 @@
     color: #5D5C61;
     margin: 30px 50px 0 0;
 }
+
+@media (max-width: 1025px) {
+    .Navbar {
+        margin-right: 0;
+        justify-content: center;
+    }
+    .Navbar--Links {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .Navbar--Link {
+        margin-right: 0;
+    }
+}

@@ -17,7 +17,7 @@
 }
 
 .Layout--Body {
-    padding-top: 15vh;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
@@ -43,6 +43,8 @@
     display: flex;
     border: none;
     background-color: #FFFFFF;
+    font-size: 20px;
+    color: #5D5C61;
 }
 
 .LayoutTitle--Title {
@@ -61,4 +63,23 @@
 .Layout--NothingDue {
     color: #5D5C61;
     font-size: 20px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1025px) {
+    .Layout--Body {
+        padding-top: 5vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .LayoutTitle--Title {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    .LayoutTitle--Hr {
+        height: 2px;
+    }
 }

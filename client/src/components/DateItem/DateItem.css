@@ -16,12 +16,7 @@
     width: 100%;
 }
 
-.DateItem--Title {
-    display: flex;
-    font-size: 25px;
-}
-
-.DateItem--Date {
+.DateItem--Title, .DateItem--Date {
     display: flex;
     font-size: 25px;
 }
@@ -29,7 +24,7 @@
 .DateItem--Description {
     display: flex;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .DateItem--Tags {
@@ -43,4 +38,20 @@
     font-size: 15px;
     padding: 5px 10px;
     margin-right: 10px;
+}
+
+@media (max-width: 540px) {
+    .DateItem {
+        width: 65%;
+        padding: 15px 20px;
+    }
+    .DateItem--Head {
+        flex-direction: column;
+    }
+    .DateItem--Title, .DateItem--Date {
+        font-size: 20px;
+    }
+    .DateItem--Description {
+        font-size: 17px;
+    }
 }
