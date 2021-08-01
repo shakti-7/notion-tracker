@@ -14,3 +14,6 @@ In the function you use to make the POST request to the required endpoint, you c
 
 ## To check it out
 'npm install' and 'npm run dev' after adding your environment variables. It runs the backend server on port 5000 and the frontend react app on 3000
+
+### A glimpse
+<img src="/client/src/images/screenshot.png" height="300">
