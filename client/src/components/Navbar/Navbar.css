@@ -2,6 +2,17 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+.Navbar--Icon {
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 10px 0 0;
+    width: 100%;
 }
 
 .Navbar--Links {
@@ -17,7 +28,7 @@
     font-size: 25px;
     text-decoration: none;
     color: #5D5C61;
-    margin: 30px 50px 0 0;
+    margin: 20px 50px 20px 0;
 }
 
 @media (max-width: 1025px) {
@@ -31,5 +42,23 @@
     }
     .Navbar--Link {
         margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .Navbar--Links {
+        transform: scale(1, 1);
+        transform-origin: top;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+    }
+    .Navbar--Link {
+        font-size: 20px;
     }
 }

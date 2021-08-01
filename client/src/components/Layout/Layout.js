@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Icon } from '@iconify/react';
 
+import chevronDown from '@iconify/icons-mdi/chevron-down';
+import chevronRight from '@iconify/icons-mdi/chevron-right';
 import spinner from "../../images/spinner.gif"
 
 import DateItem from "../DateItem/DateItem"
@@ -76,9 +79,7 @@ class Layout extends Component {
 
         return (
             <div className="Layout">
-                {
-                    window.innerWidth>=768 ? <Navbar /> : null
-                }
+                <Navbar />
                 {
                     this.state.loading ?
                         <div className="Layout--LoadingContainer">
@@ -87,7 +88,7 @@ class Layout extends Component {
                     <div className="Layout--Body">
                         <div className="Layout--Container" id="today">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleToday()} style={{ transform: this.state.today ? "rotate(90deg)" : null }}>{'>'}</button>
+                                <Icon icon={this.state.today ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleToday()} />
                                 <div className="LayoutTitle--Title">Today</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
@@ -103,29 +104,33 @@ class Layout extends Component {
                         </div>
                         <div className="Layout--Container" id="upcoming">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()} style={{ transform: this.state.upcoming ? "rotate(90deg)" : null }}>{`>`}</button>
+                                <Icon icon={this.state.upcoming ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()} />
                                 <div className="LayoutTitle--Title">Upcoming</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
                             {
                                 this.state.upcoming ?
-                                    this.state.upcomingDates.map(date => (
-                                        <DateItem key={index++} date={date} bgcolor={bgcolors[index%2]} tagbgcolor={tagbgcolors[index%2]} />
-                                    )) :
+                                    this.state.upcomingDates.length>0 ?
+                                        this.state.upcomingDates.map(date => (
+                                            <DateItem key={index++} date={date} bgcolor={bgcolors[index%2]} tagbgcolor={tagbgcolors[index%2]} />
+                                        )) :
+                                    <div className="Layout--NothingDue">Nothing upcoming!</div> :
                                 null
                             }
                         </div>
                         <div className="Layout--Container" id="completed">
                             <div className="LayoutTitle">
-                                <button className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()} style={{ transform: this.state.completed ? "rotate(90deg)" : null }}>{`>`}</button>
+                                <Icon icon={this.state.completed ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()} />
                                 <div className="LayoutTitle--Title">Completed</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
                             {
                                 this.state.completed ?
-                                    this.state.completedDates.map(date => (
-                                        <DateItem key={index++} date={date} bgcolor={bgcolors[index%2]} tagbgcolor={tagbgcolors[index%2]}/>
-                                    )) :
+                                    this.state.completedDates ?
+                                        this.state.completedDates.map(date => (
+                                            <DateItem key={index++} date={date} bgcolor={bgcolors[index%2]} tagbgcolor={tagbgcolors[index%2]}/>
+                                        )) :
+                                    <div className="Layout--NothingDue">Nothing completed yet!</div> :
                                 null
                             }
                         </div>

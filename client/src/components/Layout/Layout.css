@@ -17,7 +17,7 @@
 }
 
 .Layout--Body {
-    padding-top: 10vh;
+    padding-top: 15vh;
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
@@ -41,10 +41,9 @@
 
 .LayoutTitle--Button {
     display: flex;
-    border: none;
-    background-color: #FFFFFF;
-    font-size: 20px;
+    font-size: 45px;
     color: #5D5C61;
+    z-index: inherit;
 }
 
 .LayoutTitle--Title {
@@ -68,13 +67,10 @@
     margin: 0 auto;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 768px) {
     .Layout--Body {
         padding-top: 5vh;
     }
-}
-
-@media (max-width: 768px) {
     .LayoutTitle--Title {
         font-size: 20px;
         padding: 0 5px;
