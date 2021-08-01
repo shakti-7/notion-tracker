@@ -4,4 +4,4 @@ Notion is a productivity app I use regularly. It has so many kinds of data stora
 I've used React to make the UI, and Node and Express to set up the backend server that fetches data from my Notion app.
 
 ### To check it out
-Fork and 'npm run dev' which runs the backend server on port 5000 and the frontend react app on 3000
+Fork/Clone and 'npm run dev' which runs the backend server on port 5000 and the frontend react app on 3000
