@@ -43,7 +43,6 @@
     display: flex;
     font-size: 45px;
     color: #5D5C61;
-    z-index: inherit;
 }
 
 .LayoutTitle--Title {

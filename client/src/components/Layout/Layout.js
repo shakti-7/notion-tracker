@@ -88,7 +88,7 @@ class Layout extends Component {
                     <div className="Layout--Body">
                         <div className="Layout--Container" id="today">
                             <div className="LayoutTitle">
-                                <Icon icon={this.state.today ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleToday()} />
+                                <Icon icon={this.state.today ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleToday()} style={{ transform: "none" }}/>
                                 <div className="LayoutTitle--Title">Today</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
@@ -104,7 +104,7 @@ class Layout extends Component {
                         </div>
                         <div className="Layout--Container" id="upcoming">
                             <div className="LayoutTitle">
-                                <Icon icon={this.state.upcoming ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()} />
+                                <Icon icon={this.state.upcoming ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleUpcoming()} style={{ transform: "none" }}/>
                                 <div className="LayoutTitle--Title">Upcoming</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
@@ -120,7 +120,7 @@ class Layout extends Component {
                         </div>
                         <div className="Layout--Container" id="completed">
                             <div className="LayoutTitle">
-                                <Icon icon={this.state.completed ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()} />
+                                <Icon icon={this.state.completed ? chevronDown : chevronRight} className="LayoutTitle--Button" onClick={()=>this.onToggleCompleted()} style={{ transform: "none" }}/>
                                 <div className="LayoutTitle--Title">Completed</div>
                                 <div className="LayoutTitle--Hr"></div>
                             </div>
