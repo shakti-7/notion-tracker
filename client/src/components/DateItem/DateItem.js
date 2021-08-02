@@ -9,12 +9,17 @@ class DateItem extends Component {
         let { bgcolor, tagbgcolor } = this.props
         let { title, date, description, tags } = dateitem
         let idx=0
+        
+        let datearray = []
+
+        datearray=date.split('-').reverse()
+        let correctdate = datearray[0]+'-'+datearray[1]+'-'+datearray[2]
 
         return (
             <div className="DateItem" style={{ backgroundColor: bgcolor }}>
                 <div className="DateItem--Head">
                     <div className="DateItem--Title">{title}</div>
-                    <div className="DateItem--Date">{date}</div>
+                    <div className="DateItem--Date">{correctdate}</div>
                 </div>
                 <div className="DateItem--Description">{description}</div>
                 <div className="DateItem--Tags">
